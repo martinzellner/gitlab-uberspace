@@ -67,6 +67,17 @@ There are new configuration options available for gitlab.yml. View them with the
 git diff 7-0-stable:config/gitlab.yml.example 7-1-stable:config/gitlab.yml.example
 ```
 
+Please update the maximum memory limit for git to 20MB
+
+```yml
+  git:
+    bin_path: /usr/bin/git
+    # The next value is the maximum memory size grit can use
+    # Given in number of bytes per git object (e.g. a commit)
+    # This value can be increased if you have very large commits
+    max_size: 20971520 # 20.megabytes
+```
+
 ### 7. Start application @todo
 
     svc -u ~/service/sidekiq/

@@ -8,7 +8,8 @@ if you haven't done it already, create a bin folder in your home directory:
 
 	mkdir ~/bin
 
-copy `gitlab` and `sidekiq` in this `bin` folder.   
+copy `gitlab` and `sidekiq` in this `bin` folder. 
+make both scripts executable with `chmod +x`    
 **IMPORTANT** if your gitlab instance is __not__ installed in ~/gitlab you need to edit both service scripts and set the path according to your needs!
 
 Setup two deamons according to [uberspace documentation](https://wiki.uberspace.de/system:daemontools):

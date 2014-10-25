@@ -26,6 +26,13 @@ git checkout -- db/schema.rb # local changes will be restored automatically
 ```bash
 git checkout 7-4-stable
 ```
+#### 2.1. Update gitlab-shell
+
+```bash
+cd /home/[user]/gitlab-shell
+git fetch
+git checkout v2.0.1
+```
 
 ### 3. Install libs, migrations, etc.
 

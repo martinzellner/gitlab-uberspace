@@ -56,15 +56,6 @@ git diff origin/7-4-stable:config/gitlab.yml.example origin/7-5-stable:config/gi
 editor config/unicorn.rb
 ```
 
-#### Change nginx https settings
-
-* HTTPS setups: Make `/etc/nginx/sites-available/gitlab-ssl` the same as https://gitlab.com/gitlab-org/gitlab-ce/blob/7-5-stable/lib/support/nginx/gitlab-ssl but with your setting
-
-#### MySQL Databases: Update database.yml config file
-
-* Add `collation: utf8_general_ci` to config/database.yml as seen in [config/database.yml.mysql](config/database.yml.mysql)
-
-
 ### 5. Start application
 
 ```
@@ -91,13 +82,13 @@ Only applies if running MySQL database created with GitLab 6.7 or earlier. If yo
 
 ```
 # Stop GitLab
-sudo service gitlab stop
-
-# Secure your MySQL installation (added in GitLab 6.2)
-sudo mysql_secure_installation
+```bash
+svc -d ~/service/sidekiq/
+svc -d ~/service/gitlab/
+```
 
 # Login to MySQL
-mysql -u root -p
+mysql -u [user] -p
 
 # do not type the 'mysql>', this is part of the prompt
 

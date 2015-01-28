@@ -66,6 +66,12 @@ git diff origin/7-6-stable:config/gitlab.yml.example origin/7-7-stable:config/gi
 #### Setup time zone (optional)
 
 Consider setting the time zone in `gitlab.yml` otherwise GitLab will default to UTC. If you set a time zone previously in [`application.rb`](config/application.rb) (unlikely), unset it.
+To do this set or uncomment (thanks [Florian](https://blog.kanedo.net/2121,gitlab-version-7-7-auf-einem-uberspace.html#comment-26248))
+```
+gitlab:
+	# [...]
+	time_zone: 'Berlin'
+```
 
 ### 6. Start application
 

@@ -22,14 +22,14 @@ cd /home/[user]/gitlab
 ruby bin/upgrade.rb
 ```
 
-### 5. Start application
+### 3. Start application
 
 ```
 svc -u ~/service/sidekiq/
 svc -u ~/service/gitlab/
 ```
 
-### 6. Check application status
+### 4. Check application status
 
 Check if GitLab and its environment are configured correctly:
 
